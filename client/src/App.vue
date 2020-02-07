@@ -22,7 +22,7 @@
                     d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z"
                   />
                 </svg>
-                0274-5305505
+                <span>0274-5305505</span>
               </a>
             </li>
             <li class="inline list-item">
@@ -39,7 +39,7 @@
                     d="M20 6h-1v8c0 .55-.45 1-1 1H6v1c0 1.1.9 2 2 2h10l4 4V8c0-1.1-.9-2-2-2zm-3 5V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v13l4-4h9c1.1 0 2-.9 2-2z"
                   />
                 </svg>
-                live chat
+                <span>live chat</span>
               </a>
             </li>
             <li class="inline list-item">
@@ -56,7 +56,7 @@
                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"
                   />
                 </svg>
-                member area
+                <span>member area</span>
               </a>
             </li>
           </ul>
@@ -149,9 +149,11 @@
           <div class="pricing-wrapper">
             <div class="pricing-card">
               <h4>{{ listprice[0].name }}</h4>
-              <p class="strikethrough">Rp. {{ listprice[0].actualprice }}</p>
-              <p class="pricing-now">Rp. {{ listprice[0].promoprice }}/bln</p>
-              <p class="pricing-user">{{ listprice[0].user }} Pengguna Terdaftar</p>
+              <p class="strikethrough">{{ formatCurrency(listprice[0].actualprice) }}</p>
+              <p class="pricing-now">{{ formatCurrency(listprice[0].promoprice) }}/bln</p>
+              <p class="pricing-user">
+                <strong>{{ listprice[0].user }}</strong> Pengguna Terdaftar
+              </p>
               <div>
                 <ul>
                   <li>
@@ -195,9 +197,11 @@
             </div>
             <div class="pricing-card">
               <h4>{{ listprice[1].name }}</h4>
-              <p class="strikethrough">Rp. {{ listprice[1].actualprice }}</p>
-              <p class="pricing-now">Rp. {{ listprice[1].promoprice }}/bln</p>
-              <p class="pricing-user">{{ listprice[1].user }} Pengguna Terdaftar</p>
+              <p class="strikethrough">{{ formatCurrency(listprice[1].actualprice) }}</p>
+              <p class="pricing-now">{{ formatCurrency(listprice[1].promoprice) }}</p>
+              <p class="pricing-user">
+                <strong>{{ listprice[1].user }}</strong> Pengguna Terdaftar
+              </p>
               <div>
                 <ul>
                   <li>
@@ -249,11 +253,18 @@
               </div>
               <button class="secondary-btn">Pilih Sekarang</button>
             </div>
-            <div class="pricing-card">
-              <h4>{{ listprice[2].name }}</h4>
-              <p class="strikethrough">Rp. {{ listprice[2].actualprice }}</p>
-              <p class="pricing-now">Rp. {{ listprice[2].promoprice }}/bln</p>
-              <p class="pricing-user">{{ listprice[2].user }} Pengguna Terdaftar</p>
+            <div class="pricing-card active-pricing-card">
+              <div class="pricing-card-header">
+                <h4 class="active-pricing-card">{{ listprice[2].name }}</h4>
+                <p class="strikethrough">{{ formatCurrency(listprice[2].actualprice) }}</p>
+                <p
+                  class="pricing-now active-pricing-card"
+                >{{ formatCurrency(listprice[2].promoprice) }}/bln</p>
+              </div>
+
+              <p class="pricing-user pricing-user-active active-pricing-card">
+                <strong>{{ listprice[2].user }}</strong> Pengguna Terdaftar
+              </p>
               <div>
                 <ul>
                   <li>
@@ -313,13 +324,15 @@
                   </li>
                 </ul>
               </div>
-              <button class="secondary-btn">Pilih Sekarang</button>
+              <button class="main-btn">Pilih Sekarang</button>
             </div>
             <div class="pricing-card">
               <h4>{{ listprice[3].name }}</h4>
-              <p class="strikethrough">Rp. {{ listprice[3].actualprice }}</p>
-              <p class="pricing-now">Rp. {{ listprice[3].promoprice }}/bln</p>
-              <p class="pricing-user">{{ listprice[3].user }} Pengguna Terdaftar</p>
+              <p class="strikethrough">{{ formatCurrency(listprice[3].actualprice) }}</p>
+              <p class="pricing-now">{{ formatCurrency(listprice[3].promoprice) }}/bln</p>
+              <p class="pricing-user">
+                <strong>{{ listprice[3].user }}</strong> Pengguna Terdaftar
+              </p>
               <div>
                 <ul>
                   <li>
@@ -569,7 +582,7 @@
                 </li>
               </ul>
               <p class="notes">Nb. Composer dan SSH hanya tersedia pada paket Personal dan Bisnis</p>
-              <button class="main-button">Pilih Hosting Anda</button>
+              <button class="main-btn">Pilih Hosting Anda</button>
             </div>
             <div>
               <img
@@ -700,44 +713,117 @@
         </span> Hubungi Kami :
         <strong>0274-5305505</strong>
       </p>
-      <button>live chat</button>
+      <button class="live-chat">
+        <svg
+          class="svg-grey"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M20 6h-1v8c0 .55-.45 1-1 1H6v1c0 1.1.9 2 2 2h10l4 4V8c0-1.1-.9-2-2-2zm-3 5V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v13l4-4h9c1.1 0 2-.9 2-2z"
+          />
+        </svg>
+        live chat
+      </button>
     </div>
     <footer>
       <div class="container">
         <div class="footer-div">
           <div class="footer-card">
             <h6>hubungi kami</h6>
+            <a href="tel:+02745305505">0274-5305505</a>
+            <p>Senin - Minggu</p>
+            <p>24 Jam Nonstop</p>
+            <br />
+            <p>Jl. Selokan Mataram Monjali</p>
+            <p>Karangjati MT I/304</p>
+            <p>Sinduadi, Mlati, Sleman</p>
+            <p>Yogyakarta 55284</p>
           </div>
           <div class="footer-card">
             <h6>layanan</h6>
+            <a href="#">Domain</a>
+            <a href="#">Shared Hosting</a>
+            <a href="#">Cloud VPS Hosting</a>
+            <a href="#">Managed VPS Hosting</a>
+            <a href="#">Web Builder</a>
+            <a href="#">Keamanan SSL / HTTPS</a>
+            <a href="#">Jasa pembukaan Website</a>
+            <a href="#">Program Affiliasi</a>
           </div>
           <div class="footer-card">
             <h6>service hosting</h6>
+            <a href="#">Hosting Murah</a>
+            <a href="#">Hosting Indonesia</a>
+            <a href="#">Hosting Singapura SG</a>
+            <a href="#">Hosting PHP</a>
+            <a href="#">Hosting Wordpress</a>
+            <a href="#">Hosting Laravel</a>
           </div>
           <div class="footer-card">
             <h6>tutorial</h6>
+            <a href="#">Knowlegdebase</a>
+            <a href="#">Blog</a>
+            <a href="#">Cara Pembayaran</a>
           </div>
         </div>
         <div class="footer-div">
           <div class="footer-card">
             <h6>tentang kami</h6>
+            <a href="#">Tim Niagahoster</a>
+            <a href="#">Karir</a>
+            <a href="#">Events</a>
+            <a href="#">Penawaran & Promo Spesial</a>
+            <a href="#">Kontak Kami</a>
           </div>
           <div class="footer-card">
             <h6>kenapa pilih niagahoster?</h6>
+            <a href="#">Support Terbaik</a>
+            <a href="#">Garansi Harga Termurah</a>
+            <a href="#">Datacenter Hosting Terbaik</a>
+            <a href="#">Review Pelanggan</a>
           </div>
-          <div class="footer-card">
+          <div class="footer-newsletter">
             <h6>newsletter</h6>
-            <div class="newsletter-btn-wrapper">
-              <input type="email" />
-              <button class="main-btn">Berlangganan</button>
+            <div class="newsletter-wrapper">
+              <div>
+                <div class="newsletter-btn-wrapper">
+                  <input type="email" placeholder="Email" />
+                  <button>Berlangganan</button>
+                </div>
+                <p>Dapatkan promo dan konten menarik dari penyedia hosting terbaik Anda.</p>
+              </div>
+              <div>
+                <a href="#">
+                  <img src="./assets/images/fb.png" alt="Facebook link" />
+                </a>
+                <a href="#">
+                  <img src="./assets/images/tw.png" alt="Twitter link" />
+                </a>
+                <a href="#">
+                  <img src="./assets/images/gl.png" alt="Google Plus link" />
+                </a>
+              </div>
             </div>
-            <p>Dapatkan promo dan konten menarik dari penyedia hosting terbaik Anda.</p>
           </div>
         </div>
-        <div class="footer-div">
+        <div class="footer-payment">
           <h6>pembayaran</h6>
-          <div>kartu kartu kartu</div>
-          <p>Aktivasi instan dengan e-Payment Hosting dan domain langsung aktif</p>
+          <div class="card-holder">
+            <img src="./assets/images/bca.png" alt="BCA" />
+            <img src="./assets/images/mandiri.png" alt="Mandiri" />
+            <img src="./assets/images/bni.png" alt="BNI" />
+            <img src="./assets/images/visa.png" alt="Visa" />
+            <img src="./assets/images/master.png" alt="Master Card" />
+            <img src="./assets/images/bersama.png" alt="ATM bersama" />
+            <img src="./assets/images/permata.png" alt="Permata" />
+            <img src="./assets/images/prima.png" alt="Prima" />
+            <img src="./assets/images/alto.png" alt="Alto" />
+          </div>
+          <p class="darker">Aktivasi instan dengan e-Payment Hosting dan domain langsung aktif</p>
         </div>
         <div class="footer-div copyright">
           <div>
@@ -750,7 +836,7 @@
           <div>
             <a href="#">Syarat dan Ketentuan</a>
             <span>|</span>
-            <a href="#">Kebijakan Privase</a>
+            <a href="#">Kebijakan Privasi</a>
           </div>
         </div>
       </div>
@@ -787,12 +873,101 @@ export default {
           console.log(error);
         }
       );
+    },
+    formatCurrency(num) {
+      return new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0
+      }).format(num);
+      /* return num.toLocaleString("id-ID", {
+        style: "currency",
+        currency: "IDR"
+      }); */
     }
   }
 };
 </script>
 
 <style>
+/** IMPORT FONT */
+@font-face {
+  font-family: "mon reg";
+  src: url("./assets/fonts/montserrat/Montserrat-Regular.otf");
+}
+@font-face {
+  font-family: "mon light";
+  src: url("./assets/fonts/montserrat/Montserrat-Light.otf");
+}
+@font-face {
+  font-family: "mon hair";
+  src: url("./assets/fonts/montserrat/Montserrat-Hairline.otf");
+}
+@font-face {
+  font-family: "mon bold";
+  src: url("./assets/fonts/montserrat/Montserrat-Bold.otf");
+}
+@font-face {
+  font-family: "mon black";
+  src: url("./assets/fonts/montserrat/Montserrat-Black.otf");
+}
+@font-face {
+  font-family: "rob reg";
+  src: url("./assets/fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "rob bold";
+  src: url("./assets/fonts/roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "rob bold con";
+  src: url("./assets/fonts/roboto/Roboto-BoldCondensed.ttf");
+}
+@font-face {
+  font-family: "rob bold con it";
+  src: url("./assets/fonts/roboto/Roboto-BoldCondensedItalic.ttf");
+}
+@font-face {
+  font-family: "rob bold it";
+  src: url("./assets/fonts/roboto/Roboto-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "rob con";
+  src: url("./assets/fonts/roboto/Roboto-Condensed.ttf");
+}
+@font-face {
+  font-family: "rob con it";
+  src: url("./assets/fonts/roboto/Roboto-CondensedItalic.ttf");
+}
+@font-face {
+  font-family: "rob it";
+  src: url("./assets/fonts/roboto/Roboto-Italic.ttf");
+}
+@font-face {
+  font-family: "rob light";
+  src: url("./assets/fonts/roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "rob light it";
+  src: url("./assets/fonts/roboto/Roboto-LightItalic.ttf");
+}
+@font-face {
+  font-family: "rob med";
+  src: url("./assets/fonts/roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "rob med it";
+  src: url("./assets/fonts/roboto/Roboto-MediumItalic.ttf");
+}
+@font-face {
+  font-family: "rob thin";
+  src: url("./assets/fonts/roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "rob thin it";
+  src: url("./assets/fonts/roboto/Roboto-ThinItalic.ttf");
+}
+
 /** GENERAL STYLING */
 *,
 *::after,
@@ -806,6 +981,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #303030;
 }
 .inline {
   display: inline;
@@ -814,19 +990,80 @@ ul {
   list-style-type: none;
 }
 
+/** FONT SIZE */
+body {
+  font-family: "rob light";
+}
 h1 {
+  font-size: 2.5rem;
+  font-family: "mon bold";
 }
 h2 {
+  font-size: 2rem;
+  font-family: "mon bold";
 }
 h3 {
+  font-size: 1.8rem;
   margin: 8px 0;
+  font-family: "mon hair";
 }
 h4 {
   font-size: 1.5rem;
+  font-family: "mon bold";
 }
 h5 {
+  font-size: 1.2rem;
+  font-family: "mon bold";
 }
 h6 {
+  text-transform: uppercase;
+  color: #767676;
+  font-size: 0.8rem;
+  margin-bottom: 24px;
+}
+.main-banner {
+  font-family: "mon reg";
+}
+.main-banner p {
+  font-size: 2rem;
+  font-family: "mon light";
+}
+.main-banner ul {
+  margin: 24px 0;
+}
+.main-banner li {
+  margin: 16px 0;
+  font-family: "mon light";
+}
+.pricing-section {
+  font-family: "rob reg";
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+.laravel-wrapper p {
+  font-family: "mon reg";
+}
+p.notes {
+  font-family: "mon light";
+  font-size: 0.75rem;
+}
+.social-share p {
+  font-size: 1rem;
+}
+.help-call p {
+  font-size: 2rem;
+}
+.live-chat {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.footer-payment p {
+  font-size: 0.75rem;
+}
+.copyright p,
+.copyright a {
+  font-size: 0.75rem;
 }
 
 header,
@@ -867,6 +1104,9 @@ footer,
   background-color: #008fee;
   color: #fff;
 }
+.uppercase {
+  text-transform: uppercase;
+}
 
 /** HEADER SECTION */
 .top-header {
@@ -876,13 +1116,32 @@ footer,
   margin: 0 8px;
 }
 header {
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
+  border-bottom: 1px solid #dadada;
+  border-top: 1px solid #dadada;
 }
+.quick-menu a,
+header a {
+  color: #303030;
+  text-decoration: none;
+}
+nav li {
+  margin: 0 16px;
+}
+
 .full {
   width: 100%;
 }
 /** MAIN SECTION */
+.main-banner,
+.feature-banner,
+.pricing-section,
+.advantage-section,
+.feature-section,
+.laravel-section,
+.modul-section,
+.support-section {
+  margin: 32px 0;
+}
 
 /** MAIN BANNER */
 .main-banner {
@@ -946,7 +1205,7 @@ header {
 .pricing-card p {
   padding: 1rem;
 }
-.pricing-card div {
+.pricing-card div:not(:first-child) {
   padding: 24px;
 }
 .pricing-card li {
@@ -955,12 +1214,23 @@ header {
 .pricing-card svg {
   fill: #008fee;
 }
-
 .pricing-now {
   border-bottom: 1px solid #ececec;
 }
 .pricing-user {
   border-bottom: 1px solid #ececec;
+}
+.pricing-card-header {
+  color: #fff;
+  background-color: #00a2f3;
+}
+.active-pricing-card,
+.active-pricing-card h4 {
+  border-color: #00a2f3;
+}
+.pricing-user-active {
+  background-color: #008fee;
+  color: #fff;
 }
 
 /** Advantage Section */
@@ -1007,6 +1277,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 16px;
 }
 .feature-wrapper div {
   width: 33.33%;
@@ -1018,6 +1289,14 @@ header {
 }
 .feature-wrapper img {
   height: 60px;
+  margin-bottom: 16px;
+  margin-top: 80px;
+}
+.feature-wrapper h5 {
+  margin: 4px 0;
+}
+.feature-wrapper p {
+  padding: 0 40px;
 }
 
 /** LARAVEL SECTION */
@@ -1032,6 +1311,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding: 32px;
 }
 .laravel-wrapper div {
   width: 50%;
@@ -1039,6 +1319,13 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.laravel-wrapper p {
+  padding: 8px 0;
+  line-height: 2;
+}
+.laravel-wrapper li {
+  margin: 16px 0;
 }
 
 /** modul section */
@@ -1056,6 +1343,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 24px 0;
 }
 .modul-card {
   margin: 1rem 4rem;
@@ -1074,6 +1362,10 @@ header {
   width: 50%;
   padding: 0 24px;
 }
+.support-section p {
+  line-height: 1.6;
+  margin: 32px 0;
+}
 
 /** social share */
 .social-share {
@@ -1082,30 +1374,136 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #f7f7f7;
+  padding: 0 10%;
 }
 .help-call {
   width: 100%;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #008fee;
-  color: #fff;
-}
-
-/** FOOTER */
-.footer-div {
-  width: 100%;
+  height: 200px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  background-color: #00a2f3;
+  color: #fff;
+  padding: 0 10%;
+}
+.live-chat {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  background-color: #00a2f3;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  color: #fff;
+}
+.live-chat svg {
+  fill: #fff;
+  margin-right: 16px;
+}
+
+/** FOOTER */
+footer {
+  background-color: #303030;
+  color: #dadada;
+}
+footer a {
+  color: #dadada;
+  text-decoration: none;
+}
+footer a,
+footer p {
+  margin: 4px 0;
+}
+.footer-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer-card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0;
+}
+.footer-newsletter {
+  width: 50%;
+  margin: 32px 0;
+}
+.newsletter-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.newsletter-wrapper > div:first-child {
+  width: 50%;
+}
+.newsletter-wrapper > div:last-child {
+  width: 50%;
+  padding-left: 16px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: -10px;
+}
+
+.newsletter-btn-wrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  border-radius: 23px;
+  padding: 8px 4px;
+}
+.newsletter-btn-wrapper input {
+  width: 60%;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+}
+.newsletter-btn-wrapper button {
+  width: 40%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #008fee;
+  color: #fff;
+}
+
+.footer-payment {
+  width: 100%;
+}
+.footer-payment p {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-holder img {
+  margin-right: 16px;
+}
+.darker {
+  color: #686868;
+}
+
+.copyright {
+  border-top: 1px solid #1f1f1f;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.copyright div:last-child {
+  margin: 4px 0;
 }
 
 .svg-grey {
