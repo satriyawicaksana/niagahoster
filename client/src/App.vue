@@ -1094,7 +1094,7 @@ p.notes {
 }
 .social-share p {
   font-family: "mon reg";
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .social-wrapper p {
   color: #bdbdbd;
@@ -1472,7 +1472,7 @@ nav li {
 /** social share */
 .social-share {
   width: 100%;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
