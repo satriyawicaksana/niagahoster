@@ -596,6 +596,7 @@
             </div>
             <div>
               <img
+                class="laravel-img"
                 src="./assets/svg/illustration banner support laravel hosting.svg"
                 alt="Laravel Illustration"
               />
@@ -685,7 +686,7 @@
           <button class="secondary-btn">Selengkapnya</button>
         </section>
         <section class="support-section">
-          <div>
+          <div class="support-wrapper">
             <h3>Linux Hosting yang Stabil dengan Teknologi LVE</h3>
             <p>
               SuperMicro
@@ -1473,6 +1474,9 @@ nav li {
   line-height: 1.6;
   margin: 32px 0;
 }
+.support-section img {
+  width: 100%;
+}
 
 /** social share */
 .social-share {
@@ -1617,6 +1621,7 @@ footer p {
 .card-holder {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 }
 .card-holder img {
@@ -1639,5 +1644,87 @@ footer p {
 
 .svg-grey {
   fill: #303030;
+}
+
+@media (max-width: 1200px) {
+  .main-banner,
+  .feature-banner,
+  .advantage-wrapper,
+  .modul-wrapper {
+    flex-direction: column;
+  }
+  .pricing-wrapper,
+  .feature-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .support-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pricing-card {
+    width: 280px;
+    margin: 24px 0;
+  }
+  .feature-wrapper div {
+    width: 50%;
+  }
+  .feature-wrapper img {
+    height: 160px;
+  }
+  .laravel-wrapper,
+  .support-section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .laravel-img {
+    margin-bottom: 48px;
+  }
+  .laravel-wrapper div:first-child {
+    align-items: center;
+  }
+  .modul-card {
+    text-align: center;
+    margin: 0;
+  }
+  .support-section img {
+    margin-bottom: 24px;
+  }
+  .social-share,
+  .help-call {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .newsletter-btn-wrapper button {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 1029px) {
+  .footer-div,
+  .card-holder {
+    justify-content: center;
+  }
+  .footer-card {
+    width: 50%;
+  }
+  .footer-newsletter {
+    width: 100%;
+  }
+  .inline,
+  .inline-flex {
+    display: none;
+  }
+}
+@media (max-width: 460px) {
+  .footer-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-div-container {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>
