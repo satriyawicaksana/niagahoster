@@ -111,17 +111,17 @@
             <h1>PHP Hosting</h1>
             <p>Cepat, Handal, penuh dengan modul PHP yang Anda butuhkan</p>
             <ul>
-              <li>
-                <span class="icon check">Solusi PHP untuk performa query yang lebih cepat.</span>
+              <li class="mark">
+                <img src="./assets/images/mark.png" alt="v" /> Solusi PHP untuk performa query yang lebih cepat.
               </li>
-              <li>
-                <span>Konsumsi memori yang lebih rendah.</span>
+              <li class="mark">
+                <img src="./assets/images/mark.png" alt="v" /> Konsumsi memori yang lebih rendah.
               </li>
-              <li>
-                <span>Support PHP 5.3, PHP 5.4, PHP 5.5, PHP 7.</span>
+              <li class="mark">
+                <img src="./assets/images/mark.png" alt="v" /> Support PHP 5.3, PHP 5.4, PHP 5.5, PHP 7.
               </li>
-              <li>
-                <span>Fitur enkripsi IonCube dan Zend Guard Loaders</span>
+              <li class="mark">
+                <img src="./assets/images/mark.png" alt="v" /> Fitur enkripsi IonCube dan Zend Guard Loaders
               </li>
             </ul>
           </div>
@@ -559,20 +559,23 @@
                 mendukung penuh framework favorit anda
               </p>
               <ul>
-                <li>
+                <li class="mark">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>
                     Install Laravel
                     <strong>1 klik</strong> dengan Softaculous Installer.
                   </span>
                 </li>
-                <li>
+                <li class="mark">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>
                     Mendukung ekstensi
                     <strong>PHP MCrypt, phar, mbstring, json,</strong> dan
                     <strong>fileinfo</strong>.
                   </span>
                 </li>
-                <li>
+                <li class="mark">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>
                     Tersedia
                     <strong>Composer</strong> dan
@@ -1024,6 +1027,10 @@ h6 {
   font-size: 0.8rem;
   margin-bottom: 24px;
 }
+button {
+  font-size: 1rem;
+  font-family: "mon reg";
+}
 .top-header-left a {
   font-size: 0.75rem;
   font-family: "rob reg";
@@ -1060,14 +1067,24 @@ p.notes {
   font-size: 0.75rem;
 }
 .social-share p {
+  font-family: "mon reg";
   font-size: 1rem;
 }
 .help-call p {
+  font-family: "mon reg";
   font-size: 2rem;
+}
+.support-section p {
+  font-size: 1.1rem;
+  font-family: "rob light";
 }
 .live-chat {
   font-size: 1.2rem;
   text-transform: capitalize;
+}
+.newsletter-btn-wrapper button {
+  font-size: 0.8rem;
+  font-family: "rob reg";
 }
 .footer-payment p {
   font-size: 0.75rem;
@@ -1190,6 +1207,13 @@ nav li {
 }
 .main-baner img {
   width: 100%;
+}
+.mark {
+  display: flex;
+  align-items: center;
+}
+.mark img {
+  margin-right: 8px;
 }
 /** Feature Banner Section */
 .feature-banner {
@@ -1397,6 +1421,7 @@ nav li {
   padding: 0 24px;
 }
 .support-section p {
+  padding: 0 16px;
   line-height: 1.6;
   margin: 32px 0;
 }
