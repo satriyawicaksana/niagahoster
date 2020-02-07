@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="quick-menu">
-      <div class="top-header container flex-row-spacebetween">
-        <div>
-          <div class="inline">label</div>
-          <a href="#" class="label-title">gratis ebook 9 cara cerdas menggunakan domain [x]</a>
+      <div class="top-header">
+        <div class="top-header-left">
+          <img src="./assets/images/label.png" alt="label" />
+          <a href="#" class="label-title">Gratis Ebook 9 Cara Cerdas Menggunakan Domain [ x ]</a>
         </div>
-        <div class="inline">
-          <ul class="inline">
-            <li class="inline list-item">
+        <div class="top-header-right">
+          <ul>
+            <li class="inline-flex list-item">
               <a href="#">
                 <svg
                   class="svg-grey"
@@ -25,7 +25,7 @@
                 <span>0274-5305505</span>
               </a>
             </li>
-            <li class="inline list-item">
+            <li class="inline-flex list-item">
               <a href="#">
                 <svg
                   class="svg-grey"
@@ -42,7 +42,7 @@
                 <span>live chat</span>
               </a>
             </li>
-            <li class="inline list-item">
+            <li class="inline-flex list-item">
               <a href="#">
                 <svg
                   class="svg-grey"
@@ -986,6 +986,9 @@ body {
 .inline {
   display: inline;
 }
+.inline-flex {
+  display: inline-flex;
+}
 ul {
   list-style-type: none;
 }
@@ -1020,6 +1023,14 @@ h6 {
   color: #767676;
   font-size: 0.8rem;
   margin-bottom: 24px;
+}
+.top-header-left a {
+  font-size: 0.75rem;
+  font-family: "rob reg";
+}
+.quick-menu a,
+header a {
+  font-family: "rob reg";
 }
 .main-banner {
   font-family: "mon reg";
@@ -1111,9 +1122,32 @@ footer,
 /** HEADER SECTION */
 .top-header {
   height: 60px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-header-left {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.top-header-left a {
+  margin: 8px;
+}
+
+.top-header-right a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-header-right svg {
+  margin-right: 8px;
 }
 .list-item {
-  margin: 0 8px;
+  margin: 0 16px;
 }
 header {
   border-bottom: 1px solid #dadada;
@@ -1507,6 +1541,6 @@ footer p {
 }
 
 .svg-grey {
-  fill: grey;
+  fill: #303030;
 }
 </style>
