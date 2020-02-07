@@ -713,7 +713,26 @@
     </main>
     <div class="social-share">
       <p>Bagikan jika Anda menyukai halaman ini.</p>
-      <div class="social-div-container">facebook dll</div>
+      <div class="social-div-container">
+        <div class="social-wrapper">
+          <img src="./assets/images/share-fb.png" alt="fb" />
+          <div class="counter">
+            <p>80k</p>
+          </div>
+        </div>
+        <div class="social-wrapper">
+          <img src="./assets/images/share-tw.png" alt="tw" />
+          <div class="counter">
+            <p>450</p>
+          </div>
+        </div>
+        <div class="social-wrapper">
+          <img src="./assets/images/share-gp.png" alt="gp" />
+          <div class="counter">
+            <p>1900</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="help-call">
       <p>
@@ -1076,6 +1095,11 @@ p.notes {
 .social-share p {
   font-family: "mon reg";
   font-size: 1rem;
+}
+.social-wrapper p {
+  color: #bdbdbd;
+  font-family: "mon light";
+  font-size: 0.75rem;
 }
 .help-call p {
   font-family: "mon reg";
@@ -1457,6 +1481,30 @@ nav li {
   background-color: #f7f7f7;
   padding: 0 10%;
 }
+.social-div-container {
+  width: 40%;
+  display: flex;
+}
+.social-wrapper {
+  display: flex;
+  align-items: center;
+}
+.social-wrapper p {
+  border: 1px solid #bdbdbd;
+  padding: 8px 16px;
+  margin-left: 4px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+/* .social-wrapper p::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #bdbdbd;
+  transform: translate(-80%, -15%) rotateZ(45deg);
+} */
 .help-call {
   width: 100%;
   height: 200px;
