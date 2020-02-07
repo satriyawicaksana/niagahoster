@@ -254,6 +254,7 @@
               <button class="secondary-btn">Pilih Sekarang</button>
             </div>
             <div class="pricing-card active-pricing-card">
+              <img class="best" src="./assets/images/best.png" alt="best" />
               <div class="pricing-card-header">
                 <h4 class="active-pricing-card">{{ listprice[2].name }}</h4>
                 <p class="strikethrough">{{ formatCurrency(listprice[2].actualprice) }}</p>
@@ -1266,6 +1267,10 @@ nav li {
   width: 25%;
   text-align: center;
   border: 1px solid #ececec;
+}
+.best {
+  position: absolute;
+  transform: translate(-145px, -10px);
 }
 .pricing-card h4 {
   padding: 0.5rem;
