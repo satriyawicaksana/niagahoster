@@ -495,26 +495,32 @@
           <div class="advantage-wrapper">
             <div class="advantage-div">
               <ul>
-                <li>
+                <li class="mark center">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>max execution time 300s</span>
                 </li>
-                <li>
+                <li class="mark center">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>max execution time 300s</span>
                 </li>
-                <li>
+                <li class="mark center">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>php memory limit 1024 MB</span>
                 </li>
               </ul>
             </div>
             <div class="advantage-div">
               <ul>
-                <li>
+                <li class="mark center">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>post max size 128 MB</span>
                 </li>
-                <li>
+                <li class="mark center">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>upload max filesize 128 MB</span>
                 </li>
-                <li>
+                <li class="mark center">
+                  <img src="./assets/images/mark.png" alt="v" />
                   <span>max input vars 2500</span>
                 </li>
               </ul>
@@ -1215,6 +1221,11 @@ nav li {
 .mark img {
   margin-right: 8px;
 }
+.center span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /** Feature Banner Section */
 .feature-banner {
   width: 100%;
@@ -1316,6 +1327,9 @@ nav li {
 }
 .advantage-div li {
   padding: 0.5rem;
+}
+.advantage-div li:nth-child(even) {
+  background-color: #f1f1f1;
 }
 .advantage-div li:nth-child(2) {
   border-top: 1px solid #ececec;
