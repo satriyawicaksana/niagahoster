@@ -1207,7 +1207,7 @@ header a {
   text-decoration: none;
 }
 nav li {
-  margin: 0 16px;
+  margin: 0 8px;
 }
 
 .full {
