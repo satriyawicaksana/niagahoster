@@ -823,7 +823,9 @@
                   <input type="email" placeholder="Email" />
                   <button>Berlangganan</button>
                 </div>
-                <p>Dapatkan promo dan konten menarik dari penyedia hosting terbaik Anda.</p>
+                <p
+                  class="darker"
+                >Dapatkan promo dan konten menarik dari penyedia hosting terbaik Anda.</p>
               </div>
               <div>
                 <a href="#">
@@ -1116,6 +1118,9 @@ p.notes {
 .newsletter-btn-wrapper button {
   font-size: 0.8rem;
   font-family: "rob reg";
+}
+.newsletter-wrapper p {
+  font-size: 0.8rem;
 }
 .footer-payment p {
   font-size: 0.75rem;
@@ -1595,7 +1600,7 @@ footer p {
 }
 .newsletter-btn-wrapper button {
   width: 40%;
-  padding: 0.75rem 1.5rem;
+  padding: 12px 16px;
   border-radius: 20px;
   border: none;
   background-color: #008fee;
